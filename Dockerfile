@@ -1,4 +1,4 @@
-FROM python:3.9-alpine
+FROM python:3.9
 
 # install google chrome
 RUN wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add -
@@ -13,6 +13,9 @@ RUN unzip /tmp/chromedriver.zip chromedriver -d /usr/local/bin/
 
 # set display port to avoid crash
 ENV DISPLAY=:99
+
+# upgrade pip
+RUN pip install --upgrade pip
 
 COPY . /Interview9
 WORKDIR /Interview9
