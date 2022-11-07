@@ -1,4 +1,4 @@
-FROM python:3.10-alpine
+FROM python:3.10
 LABEL maintainer="####"
 RUN apt -f install -y
 RUN apt-get install -y wget
