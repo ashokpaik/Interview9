@@ -9,7 +9,8 @@ driver = None
 def setup(request):
     global driver
     chrome_obj = Service("chromedriver.exe")
-    driver = webdriver.Chrome(service=chrome_obj)
+    #driver = webdriver.Chrome(service=chrome_obj)
+    driver = webdriver.Remote(command_executor='http://localhost:4444/wd/hub')
     driver.get("https://rahulshettyacademy.com/angularpractice/")
     request.cls.driver = driver
     yield
