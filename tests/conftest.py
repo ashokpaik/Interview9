@@ -8,8 +8,15 @@ driver = None
 @pytest.fixture(scope="class")
 def setup(request):
     global driver
-    chrome_obj = Service("E:\SeleniumPython\chromedriver.exe")
-    driver = webdriver.Chrome(service=chrome_obj)
+    #chrome_obj = Service("E:\SeleniumPython\chromedriver.exe")
+    #driver = webdriver.Chrome(service=chrome_obj)
+    options = webdriver.ChromeOptions()
+    options.add_argument('--ignore-ssl-errors=yes')
+    options.add_argument('--ignore-certificate-errors')
+    driver = webdriver.Remote(
+        command_executor='http://localhost:4444/wd/hub',
+        options=options
+    )
     driver.get("https://rahulshettyacademy.com/angularpractice/")
     request.cls.driver = driver
     yield

@@ -1,4 +1,4 @@
-FROM python:3.10-slim
+FROM selenium/standalone-chrome
 COPY . /Interview9
 WORKDIR /Interview9
 RUN pip install --no-cache-dir -r requirements.txt
