@@ -1,6 +1,6 @@
 FROM python:3.10-slim
 COPY . /Interview9
-WORKDIR /Interview9/tests
+WORKDIR /Interview9
 RUN pip install --no-cache-dir -r requirements.txt
 RUN apt install curl
 RUN apt-get install -yqq unzip curl
