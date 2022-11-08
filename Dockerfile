@@ -6,6 +6,6 @@ RUN sudo curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
 RUN sudo python3.8 get-pip.py
 COPY . /Interview9
 WORKDIR /Interview9
-RUN pip install --no-cache-dir -r requirements.txt
+RUN sudo pip install --no-cache-dir -r requirements.txt
 RUN ["pytest", "-v", "--junitxml=testreports/report.xml"]
 CMD tail -f /dev/null
