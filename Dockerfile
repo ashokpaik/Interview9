@@ -1,4 +1,4 @@
-FROM python:3.10-alpine
+FROM python:3.10-buster
 COPY . /Interview9
 WORKDIR /Interview9
 RUN apk add chromium
