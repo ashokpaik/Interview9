@@ -1,7 +1,6 @@
 FROM selenium/standalone-chrome
 COPY . /Interview9
 WORKDIR /Interview9
-RUN sudo adduser seluser
 RUN sudo usermod -aG sudo seluser
 RUN apt-get update
 RUN apt-get install -y python3
