@@ -8,6 +8,6 @@ RUN exit
 COPY . /Interview9
 WORKDIR /Interview9
 RUN pip install --no-cache-dir -r requirements.txt
-RUN export PATH="/usr/local/bin:$PATH"
+RUN export PATH="/home/seluser/.local/bin:$PATH"
 RUN ["pytest", "-v", "--junitxml=report.xml"]
 CMD tail -f /dev/null
