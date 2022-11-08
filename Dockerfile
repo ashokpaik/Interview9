@@ -1,5 +1,7 @@
 FROM selenium/standalone-chrome
 RUN sudo apt install python3
+RUN sudo apt update
+RUN sudo apt install python3-pip
 COPY . /Interview9
 WORKDIR /Interview9
 RUN pip install --no-cache-dir -r requirements.txt
