@@ -1,4 +1,4 @@
-FROM FROM python:3.10-slim
+FROM python:3.10-slim
 
 # Installing Unzip
 RUN sudo apt-get install -yqq unzip
