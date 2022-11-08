@@ -2,6 +2,8 @@ FROM ubuntu
 COPY . /Interview9
 WORKDIR /Interview9
 RUN apt-get update
+#Install PIP
+RUN apt install python3-pip
 #Install Chrome
 RUN apt-get install -y wget
 RUN wget -q https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
