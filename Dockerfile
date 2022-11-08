@@ -1,7 +1,7 @@
 FROM selenium/standalone-chrome
 RUN sudo apt-get update
 RUN sudo apt-get install -y python3
-RUN sudo apt-get install python3-distutils
+RUN sudo apt-get install python3.8-distutils
 RUN sudo curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
 RUN sudo python3.8 get-pip.py
 COPY . /Interview9
