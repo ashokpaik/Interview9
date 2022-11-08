@@ -7,6 +7,5 @@ RUN sudo python3.8 get-pip.py
 COPY . /Interview9
 WORKDIR /Interview9
 RUN sudo pip install --no-cache-dir -r requirements.txt
-RUN exit
-RUN ["pytest", "-v", "--junitxml=report.xml"]
+RUN sudo ["pytest", "-v", "--junitxml=report.xml"]
 CMD tail -f /dev/null
