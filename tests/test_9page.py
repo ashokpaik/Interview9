@@ -8,7 +8,7 @@ from utilities.BaseClass import BaseClass
 
 class Test9page(BaseClass):
 
-    @pytest.fixture(params=Test9pagedata.getTestData("Testcase1"))
+    @pytest.fixture(params=Test9pagedata.test9pagedata)
     def getdata(self, request):
         return request.param
 
