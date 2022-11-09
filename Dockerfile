@@ -21,5 +21,5 @@ RUN chmod +x /usr/bin/chromedriver
 
 
 RUN pip install --no-cache-dir -r requirements.txt
-RUN ["pytest", "-v", "--junitxml=report.xml"]
+RUN ["pytest", "--html=/testreports/report.html", "-v", "--junit-xml=report.xml"]
 CMD tail -f /dev/null
